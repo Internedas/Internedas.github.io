@@ -1,0 +1,21 @@
+{
+  "LAB7": {
+    "prefix": "lab",
+    "body": [
+      "<!DOCTYPE html>",
+      "<!--Nedas Alijošius EKfu-23-->",
+      " <link rel=stylesheet href="styles.css">"
+      "<html lang=\"en\" data-lt-installed=\"true\">",
+      "    <head>",
+      "    <meta charset=\"UTF-8\">",
+      "        <title> </title>",
+      "    </head>",
+      "",
+      "    <body>",
+      "",
+      "    </body>",
+      "</html>"
+    ],
+    "description": "Creates pre-made LAB7 template"
+  }
+}
