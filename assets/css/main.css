@@ -1212,6 +1212,9 @@ section,
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
 }
+.clock{
+  font-size: 30px;
+}
 
 /*--------------------------------------------------------------
 # Pricing Section
@@ -1439,7 +1442,11 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
-
+select {
+  padding: 2px 5px;
+  background-color: rgba(52, 52, 52, 0.155);
+  border-width: 0;
+}
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/

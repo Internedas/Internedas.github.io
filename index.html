@@ -27,6 +27,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <script src="assets/js/main.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <!-- =======================================================
   * Template Name: Laura
@@ -257,7 +258,52 @@
         <div class="container section-title" data-aos="fade-up">
           <span class="description-title">My design portfolio</span>
           <h2>My design portfolio</h2>
+          <p>Some formulas</p>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi>f</mi> <!-- Identifier, function name or a symbol-->
+            <mo>(</mo> <!-- Operator-->
+            <mi>a</mi><!-- Identifier, function name or a symbol-->
+            <mo>)</mo> <!-- Operator-->
+            <mo>=</mo> <!-- Operator-->
+            <mfrac> <!--Fraction tag-->
+              <mn>1</mn><!--Standard number tag-->
+              <mrow><!--Fraction row tag-->
+                <mn>2</mn><!--Standard number tag-->
+                <mi>&#x3c0;</mi> <!-- Identifier, function name or a symbol-->
+                <mi>i</mi> <!-- Identifier, function name or a symbol-->
+              </mrow><!--Fraction row tag-->
+            </mfrac><!--Fraction tag-->
+            <mo>&#x222e;</mo> <!-- Operator-->
+            <mfrac><!--Fraction tag-->
+              <mrow><!--Fraction row tag-->
+                <mi>f</mi> <!-- Identifier, function name or a symbol-->
+                <mo>(</mo> <!-- Operator-->
+                <mi>z</mi> <!-- Identifier, function name or a symbol-->
+                <mo>)</mo> <!-- Operator-->
+              </mrow><!--Fraction row tag-->
+              <mrow><!--Fraction row tag-->
+                <mi>z</mi> <!-- Identifier, function name or a symbol-->
+                <mo>-</mo> <!-- Operator-->
+                <mi>a</mi> <!-- Identifier, function name or a symbol-->
+              </mrow><!--Fraction row tag-->
+            </mfrac><!--Fraction tag-->
+            <mi>d</mi> <!-- Identifier, function name or a symbol-->
+            <mi>z</mi> <!-- Identifier, function name or a symbol-->
+          </math>
+          <div class="clock" id="clock"></div>
           <p>Previous designs, for more information inquire further</p>
+          <svg width="200" height="180" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="30" height="110" width="110" style="stroke:green;fill:red">
+              <animateTransform
+                attributeName="transform"
+                begin="0s"
+                dur="10s"
+                type="rotate"
+                from="0 85 85"
+                to="360 85 85"
+                repeatCount="indefinite" />
+            </rect>
+          </svg> 
         </div><!-- End Section Title -->
   
         <div class="container-fluid">
@@ -352,35 +398,118 @@
 
         </div>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+        <div data-aos="fade-up" data-aos-delay="300">
           <div class="row gy-4">
 
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              <input  class="form-control" placeholder="First Name" type="text" id="fname" name="fname">
             </div>
 
             <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+              <input  class="form-control" placeholder="Last Name" type="text" id="lname" name="lname">
+            </div>
+            <div class="col-md-6 ">
+              <input  class="form-control" placeholder="Email" type="text" id="email" name="emai">
+            </div>
+            <div class="col-md-6 ">
+              <input  class="form-control" placeholder="+370 ... ....." type="text" id="pnumber" name="pnumber">
             </div>
 
             <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+              <input type="text" class="form-control" name="address" placeholder="Adress" id="adress" required="">
             </div>
+            <div class="col-md-6">
+              <label for="quest1">How likely are you to hire me?</label>
 
+                <select name="quest1" id="quest1">
+                  <option value="">Please choose an option</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+              <label for="quest2">How would you rate this website?</label>
+
+                <select name="quest2" id="quest2">
+                  <option value="">Please choose an option</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+              <label for="quest3">How would you rate my resume?</label>
+
+                <select name="quest3" id="quest3">
+                  <option value="">Please choose an option</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+              <label for="quest4">How would you rate my portfolio?</label>
+
+                <select name="quest4" id="quest4">
+                  <option value="">Please choose an option</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </div>
             <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-            </div>
+              <label for="quest5">What grade does this work deserve?</label>
 
+                <select name="quest5" id="quest5">
+                  <option value="">Please choose an option</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </div>
             <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
+              <button onclick="storedata()">Submit answers</button>
+              <span id="avrage">Average of rating would be displayed here</span>
             </div>
 
           </div>
-        </form><!-- End Contact Form -->
+        </div><!-- End Contact Form -->
 
       </div>
 

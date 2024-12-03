@@ -6,6 +6,87 @@
 * License: https://bootstrapmade.com/license/
 */
 
+setInterval(showTime, 1000);
+
+function storedata(){
+  const person = new Object();
+
+// Add Properties
+person.firstName = "";
+person.lastName = "";
+person.email = "";
+person.phone = "";
+person.address = "";
+person.quest1 = 0;
+person.quest2 = 0;
+person.quest3 = 0;
+person.quest4 = 0;
+person.quest5 = 0;
+  person.firstname = document.getElementById("fname").value;
+  person.lastname = document.getElementById("lname").value;
+  person.email = document.getElementById("email").value;
+  person.phone = document.getElementById("pnumber").value;
+  person.address = document.getElementById("adress").value;
+  person.quest1 = document.getElementById("quest1").value;
+  person.quest2 = document.getElementById("quest2").value;
+  person.quest3 = document.getElementById("quest3").value;
+  person.quest4 = document.getElementById("quest4").value;
+  person.quest5 = document.getElementById("quest5").value;
+  var validemailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  var validphoneRegex = /^(\+[1-9]{1}[0-9]{3,14})?([0-9]{9,14})$/;
+
+  if (!person.email.match(validemailRegex)) {
+    alert("Invalid email address!");
+  }
+  else if(person.phone.match(validphoneRegex)){
+    alert("Invalid phone number")
+  }
+  console.log(
+    "First name: " + person.firstname
+  );
+  console.log(
+    "Last name: " + person.lastname
+  );
+  console.log(
+    "Email: " + person.email
+  );
+  console.log(
+    "Phone: " + person.phone
+  );
+  console.log(
+    "Address: " + person.address
+  );
+  console.log(
+    "Question 1: " + person.quest1
+  );
+  console.log(
+    "Question 2: " + person.quest2
+  );
+  console.log(
+    "Question 3: " + person.quest3
+  );
+  console.log(
+    "Question 4: " + person.quest4
+  );
+  console.log(
+    "Question 5: " + person.quest5
+  );
+  avr = (Number(person.quest1) + Number(person.quest2) + Number(person.quest3) + Number(person.quest4) + Number(person.quest5))/5
+  console.log(
+    "Numeric average of ratings: " + avr
+  );
+  document.getElementById("avrage").innerHTML = person.firstname + " " + person.lastname + "(" + person.email + ")" + " " + String(avr)
+  if (avr < 3.4){
+    document.getElementById("avrage").style.color = "rgb(255, 0, 0)"
+  }
+  else if(3.5 <= avr && avr < 7.1){
+    document.getElementById("avrage").style.color = "rgb(255, 165, 0)"
+  }
+  else if(7.2<= avr && avr <= 10){
+    document.getElementById("avrage").style.color = "rgb(0, 255, 0)"
+  }
+}
+
 (function() {
   "use strict";
   /**
@@ -210,3 +291,17 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+function showTime() {
+    let time = new Date();
+    let hour = time.getHours();
+    let min = time.getMinutes();
+    let sec = time.getSeconds();
+
+    let currentTime =
+        hour + ":" + min + ":" + sec;
+
+    document.getElementById(
+        "clock"
+    ).innerHTML = currentTime;
+}
